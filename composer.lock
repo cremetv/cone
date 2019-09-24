@@ -4,8 +4,110 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cadc7169cd2d5c8ea7560e056fecffb0",
+    "content-hash": "abaad42334876d643380a72e9f5a232c",
     "packages": [
+        {
+            "name": "aelvan/stamp",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aelvan/Stamp-Craft.git",
+                "reference": "0f7fddce013564f10adc20ff871184c653f4df36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aelvan/Stamp-Craft/zipball/0f7fddce013564f10adc20ff871184c653f4df36",
+                "reference": "0f7fddce013564f10adc20ff871184c653f4df36",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Stamp",
+                "handle": "stamp",
+                "schemaVersion": "2.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/aelvan/Stamp-Craft/blob/craft3/CHANGELOG.md",
+                "class": "aelvan\\stamp\\Stamp"
+            },
+            "autoload": {
+                "psr-4": {
+                    "aelvan\\stamp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "André Elvan",
+                    "homepage": "https://www.vaersaagod.no"
+                }
+            ],
+            "description": "A simple plugin for adding timestamps to filenames.",
+            "keywords": [
+                "Craft",
+                "asset-rev",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "timestamp"
+            ],
+            "time": "2018-10-06T22:01:35+00:00"
+        },
+        {
+            "name": "carlcs/craft-redactorcustomstyles",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/carlcs/craft-redactorcustomstyles.git",
+                "reference": "6f19b8cac814e6666e34c949177878a35368b548"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/carlcs/craft-redactorcustomstyles/zipball/6f19b8cac814e6666e34c949177878a35368b548",
+                "reference": "6f19b8cac814e6666e34c949177878a35368b548",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0",
+                "craftcms/redactor": "^2.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Redactor Custom Styles",
+                "handle": "redactor-custom-styles",
+                "changelogUrl": "https://github.com/carlcs/craft-redactorcustomstyles/raw/v3/CHANGELOG.md",
+                "downloadUrl": "https://github.com/carlcs/craft-redactorcustomstyles/archive/v3.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "carlcs\\redactorcustomstyles\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "carlcs",
+                    "homepage": "https://github.com/carlcs"
+                }
+            ],
+            "description": "Redactor Custom Styles plugin for Craft CMS",
+            "keywords": [
+                "Redactor",
+                "buttons",
+                "craftcms",
+                "styles"
+            ],
+            "time": "2018-06-07T15:36:35+00:00"
+        },
         {
             "name": "cebe/markdown",
             "version": "1.2.1",
@@ -65,6 +167,53 @@
                 "markdown-extra"
             ],
             "time": "2018-03-26T11:24:36+00:00"
+        },
+        {
+            "name": "clubstudioltd/craft-asset-rev",
+            "version": "6.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/clubstudioltd/craft-asset-rev.git",
+                "reference": "b4d4ada7902af654ceb081103ab4f5abb6a7e19c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clubstudioltd/craft-asset-rev/zipball/b4d4ada7902af654ceb081103ab4f5abb6a7e19c",
+                "reference": "b4d4ada7902af654ceb081103ab4f5abb6a7e19c",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.29"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/php-token-stream": "<2",
+                "phpunit/phpunit": "~5.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Asset Rev",
+                "handle": "assetrev",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/clubstudioltd/craft-asset-rev/blob/master/CHANGELOG.md",
+                "documentationUrl": "https://github.com/clubstudioltd/craft-asset-rev",
+                "downloadUrl": "https://github.com/clubstudioltd/craft-asset-rev/archive/v6.zip",
+                "developer": "Club Studio Ltd",
+                "developerUrl": "https://clubstudio.co.uk",
+                "class": "club\\assetrev\\AssetRev"
+            },
+            "autoload": {
+                "psr-4": {
+                    "club\\assetrev\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A plugin to aid cache-busting in Craft 3",
+            "time": "2018-11-20T14:45:15+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -416,6 +565,153 @@
             "time": "2019-09-17T22:35:58+00:00"
         },
         {
+            "name": "craftcms/contact-form",
+            "version": "2.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/contact-form.git",
+                "reference": "a645df88d757d620bc29bc6dd3d748374b791093"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/contact-form/zipball/a645df88d757d620bc29bc6dd3d748374b791093",
+                "reference": "a645df88d757d620bc29bc6dd3d748374b791093",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC11"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Contact Form",
+                "handle": "contact-form",
+                "documentationUrl": "https://github.com/craftcms/contact-form/blob/v2/README.md",
+                "components": {
+                    "mailer": "craft\\contactform\\Mailer"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\contactform\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Add a simple contact form to your Craft CMS site",
+            "keywords": [
+                "cms",
+                "contact",
+                "craftcms",
+                "form",
+                "yii2"
+            ],
+            "time": "2019-05-31T22:56:39+00:00"
+        },
+        {
+            "name": "craftcms/contact-form-honeypot",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/contact-form-honeypot.git",
+                "reference": "57f4e16c1d24074dcd5575440bcfe7bf6c3b8de0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/contact-form-honeypot/zipball/57f4e16c1d24074dcd5575440bcfe7bf6c3b8de0",
+                "reference": "57f4e16c1d24074dcd5575440bcfe7bf6c3b8de0",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.20"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Contact Form Honeypot",
+                "handle": "contact-form-honeypot",
+                "changelogUrl": "https://raw.githubusercontent.com/craftcms/contact-form-honeypot/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/craftcms/contact-form-honeypot/archive/master.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\contactform\\honeypot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Add a honeypot captcha to your Craft CMS contact form",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "yii2"
+            ],
+            "time": "2017-12-05T00:55:45+00:00"
+        },
+        {
+            "name": "craftcms/element-api",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/element-api.git",
+                "reference": "33da444d49950e5adc7aaa3b8e5b917993e6a40b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/element-api/zipball/33da444d49950e5adc7aaa3b8e5b917993e6a40b",
+                "reference": "33da444d49950e5adc7aaa3b8e5b917993e6a40b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC16",
+                "league/fractal": "^0.18.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Element API",
+                "handle": "element-api",
+                "documentationUrl": "https://github.com/craftcms/element-api/blob/v2/README.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\elementapi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Create a JSON API for your elements in Craft",
+            "keywords": [
+                "api",
+                "cms",
+                "craftcms",
+                "json",
+                "yii2"
+            ],
+            "time": "2019-08-01T22:45:15+00:00"
+        },
+        {
             "name": "craftcms/oauth2-craftid",
             "version": "1.0.0.1",
             "source": {
@@ -506,6 +802,54 @@
                 "plugin"
             ],
             "time": "2019-05-23T13:16:39+00:00"
+        },
+        {
+            "name": "craftcms/redactor",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/redactor.git",
+                "reference": "8fd0daca685309ad8635f28dca8c9ab2b3f228d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/8fd0daca685309ad8635f28dca8c9ab2b3f228d4",
+                "reference": "8fd0daca685309ad8635f28dca8c9ab2b3f228d4",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Redactor",
+                "handle": "redactor",
+                "documentationUrl": "https://github.com/craftcms/redactor/blob/v2/README.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\redactor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Edit rich text content in Craft CMS using Redactor by Imperavi.",
+            "keywords": [
+                "Redactor",
+                "cms",
+                "craftcms",
+                "html",
+                "yii2"
+            ],
+            "time": "2019-09-13T11:02:32+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -773,6 +1117,43 @@
             ],
             "description": "An SVG sanitizer for PHP",
             "time": "2018-10-01T17:11:02+00:00"
+        },
+        {
+            "name": "ether/seo",
+            "version": "3.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ethercreative/seo.git",
+                "reference": "97d036bb3c887131cd3d784ac35770c6f7780173"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ethercreative/seo/zipball/97d036bb3c887131cd3d784ac35770c6f7780173",
+                "reference": "97d036bb3c887131cd3d784ac35770c6f7780173",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "seo",
+                "name": "SEO",
+                "developer": "Ether Creative",
+                "developerUrl": "https://ethercreative.co.uk",
+                "class": "ether\\seo\\Seo"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ether\\seo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "SEO utilities including a unique field type, sitemap, & redirect manager",
+            "time": "2019-08-05T11:00:38+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -1159,6 +1540,70 @@
             "time": "2019-08-24T11:17:19+00:00"
         },
         {
+            "name": "league/fractal",
+            "version": "0.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/fractal.git",
+                "reference": "4e553dae1a9402adbe11c81430a64675dc97b4fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/fractal/zipball/4e553dae1a9402adbe11c81430a64675dc97b4fc",
+                "reference": "4e553dae1a9402adbe11c81430a64675dc97b4fc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "doctrine/orm": "^2.5",
+                "illuminate/contracts": "~5.0",
+                "mockery/mockery": "~0.9",
+                "pagerfanta/pagerfanta": "~1.0.0",
+                "phpunit/phpunit": "^4.8.35 || ^7.5",
+                "squizlabs/php_codesniffer": "~1.5",
+                "zendframework/zend-paginator": "~2.3"
+            },
+            "suggest": {
+                "illuminate/pagination": "The Illuminate Pagination component.",
+                "pagerfanta/pagerfanta": "Pagerfanta Paginator",
+                "zendframework/zend-paginator": "Zend Framework Paginator"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Fractal\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Sturgeon",
+                    "email": "me@philsturgeon.uk",
+                    "homepage": "http://philsturgeon.uk/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Handle the output of complex data structures ready for API output.",
+            "homepage": "http://fractal.thephpleague.com/",
+            "keywords": [
+                "api",
+                "json",
+                "league",
+                "rest"
+            ],
+            "time": "2019-05-10T02:16:43+00:00"
+        },
+        {
             "name": "league/oauth2-client",
             "version": "2.4.1",
             "source": {
@@ -1224,6 +1669,66 @@
                 "single sign on"
             ],
             "time": "2018-11-22T18:33:57+00:00"
+        },
+        {
+            "name": "lucasbares/craft-emailobfuscator",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/luke-nehemedia/craft-emailobfuscator.git",
+                "reference": "62516600f66c056aeefe9ce09fe0a38aea6cb57e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/luke-nehemedia/craft-emailobfuscator/zipball/62516600f66c056aeefe9ce09fe0a38aea6cb57e",
+                "reference": "62516600f66c056aeefe9ce09fe0a38aea6cb57e",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1",
+                "propaganistas/email-obfuscator": "~1.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Craft Emailobfuscator",
+                "handle": "craft-emailobfuscator",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/luke-nehemedia/craft-emailobfuscator/master/CHANGELOG.md",
+                "class": "lucasbares\\craftemailobfuscator\\CraftEmailobfuscator"
+            },
+            "autoload": {
+                "psr-4": {
+                    "lucasbares\\craftemailobfuscator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lucas Bares",
+                    "homepage": "http://luke.nehemedia.de"
+                }
+            ],
+            "description": "A simple plugin that adds a twig tag to obfuscate email addresses (by rot13) in text fields.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft emailobfuscator",
+                "craft-plugin",
+                "craftcms",
+                "email",
+                "mail",
+                "obfuscator",
+                "privacy",
+                "robots",
+                "rot13",
+                "spam",
+                "spam-protection"
+            ],
+            "time": "2018-11-12T20:50:31+00:00"
         },
         {
             "name": "mikehaertl/php-shellcommand",
@@ -1369,6 +1874,68 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
+        },
+        {
+            "name": "pennebaker/craft-architect",
+            "version": "2.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pennebaker/craft-architect.git",
+                "reference": "8de258b8f3924568de8cd12e03aa3982e8e7f112"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pennebaker/craft-architect/zipball/8de258b8f3924568de8cd12e03aa3982e8e7f112",
+                "reference": "8de258b8f3924568de8cd12e03aa3982e8e7f112",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1",
+                "ext-json": "*",
+                "symfony/yaml": "^3.2|^4.0"
+            },
+            "require-dev": {
+                "spicyweb/craft-neo": "^2.0",
+                "verbb/super-table": "^2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Architect",
+                "handle": "architect",
+                "schemaVersion": "2.0.0",
+                "developer": "Pennebaker",
+                "hasCpSettings": false,
+                "hasCpSection": true,
+                "changelogUrl": "https://raw.githubusercontent.com/Pennebaker/craft-architect/master/CHANGELOG.md",
+                "components": {
+                    "architectService": "pennebaker\\architect\\services\\ArchitectService"
+                },
+                "class": "pennebaker\\architect\\Architect"
+            },
+            "autoload": {
+                "psr-4": {
+                    "pennebaker\\architect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pennebaker",
+                    "homepage": "https://pennebaker.com"
+                }
+            ],
+            "description": "CraftCMS plugin to generate content models from JSON/YAML data.",
+            "keywords": [
+                "Architect",
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "time": "2019-04-22T14:36:14+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -1627,6 +2194,53 @@
                 "image processing"
             ],
             "time": "2019-07-19T12:55:50+00:00"
+        },
+        {
+            "name": "propaganistas/email-obfuscator",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Propaganistas/Email-Obfuscator.git",
+                "reference": "76160733eefb7a73f7277fea4b2d093922e551b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Propaganistas/Email-Obfuscator/zipball/76160733eefb7a73f7277fea4b2d093922e551b5",
+                "reference": "76160733eefb7a73f7277fea4b2d093922e551b5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Propaganistas\\EmailObfuscator\\": "src/"
+                },
+                "files": [
+                    "src/Obfuscator.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Propaganistas",
+                    "email": "Propaganistas@users.noreply.github.com"
+                }
+            ],
+            "description": "Provides an email obfuscator for use in various platforms.",
+            "keywords": [
+                "antispam",
+                "email",
+                "laravel",
+                "obfuscation",
+                "spam",
+                "twig"
+            ],
+            "time": "2016-12-22T16:34:03+00:00"
         },
         {
             "name": "psr/http-message",
@@ -2823,6 +3437,63 @@
                 "templating"
             ],
             "time": "2019-06-18T15:37:11+00:00"
+        },
+        {
+            "name": "utakka/redactor-anchors",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Utakka/craft-redactor-anchors.git",
+                "reference": "b40fb8f9396d7423f3f3b0153aa34be01065a0f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Utakka/craft-redactor-anchors/zipball/b40fb8f9396d7423f3f3b0153aa34be01065a0f8",
+                "reference": "b40fb8f9396d7423f3f3b0153aa34be01065a0f8",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.30",
+                "craftcms/redactor": "^2.3.3.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Redactor Anchors",
+                "handle": "redactor-anchors",
+                "developer": "Lars Heidkämper",
+                "developerUrl": "https://github.com/utakka",
+                "schemaVersion": "2.0",
+                "description": "Support for anchors in Craft 3 Redactor",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "documentationUrl": "https://github.com/utakka/craft-redactor-anchors/blob/master/README.md",
+                "changelogUrl": "https://github.com/svenjungnickel/craft-redactor-anchors/blob/master/CHANGELOG.md",
+                "class": "utakka\\redactoranchors\\RedactorAnchors"
+            },
+            "autoload": {
+                "psr-4": {
+                    "utakka\\redactoranchors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Heidkämper",
+                    "homepage": "https://github.com/utakka"
+                }
+            ],
+            "description": "Support for anchors in Craft 3 Redactor",
+            "keywords": [
+                "Craft",
+                "anchor",
+                "craft-plugin",
+                "craftcms",
+                "redactoranchors"
+            ],
+            "time": "2019-06-18T10:05:15+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
