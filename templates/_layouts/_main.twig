@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  {% if settings.googleAnalyticsCode|length %}
+    <script>
+      var gaProperty = '{{ settings.googleAnalyticsCode }}';
+      var disableStr = 'ga-disable-' + gaProperty;
+      if (document.cookie.indexOf(disableStr + '=true') > -1) {
+      window[disableStr] = true;
+      }
+      function gaOptout() {
+      document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+      window[disableStr] = true;
+      alert('Das Tracking durch Google Analytics wurde in Ihrem Browser für diese Website deaktiviert.');
+      }
+    </script>
+    {# Global site tag (gtag.js) - Google Analytics #}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ settings.googleAnalyticsCode }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ settings.googleAnalyticsCode }}', { 'anonymize_ip': true });
+    </script>
+  {% endif %}
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {% if settings.themeColor %}
+    <meta name="theme-color" content="{{ settings.themeColor }}" />
+    <meta name="msapplication-navbutton-color" content="{{ settings.themeColor }}" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="{{ settings.themeColor }}" />
+  {% endif %}
+
+  {% hook "seo" %}
+
+  {% if settings.favicon|length %}
+    {% set icon = settings.favicon.one() %}
+    <link rel="shortcut icon" href="{{ icon.url }}" type="image/x-icon">
+  {% endif %}
+  {% if settings.faviconPng|length %}
+    {% set icon = settings.faviconPng.one() %}
+    <link rel="shortcut icon" sizes="16x16" href="{{ icon.getUrl('favicon16') }}" type="image/png">
+    <link rel="shortcut icon" sizes="32x32" href="{{ icon.getUrl('favicon32') }}" type="image/png">
+    <link rel="shortcut icon" sizes="96x96" href="{{ icon.getUrl('favicon96') }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ icon.getUrl('favicon192') }}">
+  {% endif %}
+
+  {% do view.registerCssFile(siteUrl ~ '/public/css/style.min.css') %}
+
+  {% block headScripts %}{% endblock %}
+
+  {% if cookieBanner is defined %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"></noscript>
+    <script async src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function() {
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "{{ cookieBanner.bannerBg }}",
+          "text": "{{ cookieBanner.bannerTextColor }}"
+        },
+        "button": {
+          "background": "{{ cookieBanner.buttonBg }}",
+          "text": "{{ cookieBanner.buttonTextColor }}",
+          "border": "{{ cookieBanner.buttonBorderColor }}"
+        }
+      },
+      "content": {
+        "message": "{{ cookieBanner.cookieMessage }}",
+        // "dismiss": "{{ cookieBanner.buttonText }}",
+        "allow": "{{ cookieBanner.allowText }}",
+        "deny": "{{ cookieBanner.denyText }}",
+        "link": "{{ cookieBanner.linkText }}",
+
+        {% set datenschutzSection = craft.app.sections.getSectionByHandle('datenschutz') %}
+        {% if datenschutzSection|length %}{% set datenschutz = craft.entries.sectionId(datenschutzSection.id).one() %}{% endif %}
+        "href": "{% if cookieBanner.cookieLink|length %}{{ cookieBanner.cookieLink.one().url }}{% elseif datenschutz is defined %}{{ datenschutz.url }}{% else %}{% endif %}"
+      },
+      "position": "bottom-left",
+      "type": "opt-in",
+      onInitialise: function (status) {
+        console.log('init cookie');
+        var type = this.options.type;
+        console.log('type', type);
+        var didConsent = this.hasConsented();
+        console.log('didConsent', didConsent);
+        if (type == 'opt-in' && didConsent) {
+          // enable cookies
+          console.log('cookies are enabled');
+        }
+        if (type == 'opt-in' && !didConsent) {
+          // disable cookies
+          console.log('cookies are disabled');
+        }
+      },
+      onPopupOpen: function() {
+        console.log('popup open');
+      },
+      onStatusChange: function(status, chosenBefore) {
+        var type = this.options.type;
+        var didConsent = this.hasConsented();
+        if (type == 'opt-in' && didConsent) {
+          // enable cookies
+          console.log('change enable');
+        }
+        if (type == 'opt-in' && !didConsent) {
+          // disable cookies
+          console.log('change disable');
+        }
+      },
+      onRevokeChoice: function() {
+        var type = this.options.type;
+        if (type == 'opt-in') {
+          // disable cookies
+          console.log('revoke');
+        }
+      },
+    })});
+    </script>
+  {% endif %}
+
+</head>
+<body class="{% block bodyClass %}{% endblock %} {% if currentUser %}admin{% endif %}" data-barba="wrapper">
+
+
+  {# {% set mail = "<a href=\"mailto:" ~ companyInfo.email ~ "\">" ~ companyInfo.email ~ "</a>" %} #}
+
+
+  <div class="barba-container" data-barba="container" data-barba-namespace="{% block namespace %}default{% endblock %}">
+    {% include '_components/_nav.twig' %}
+
+    {% block main %}{% endblock %}
+
+    {% include '_components/_footer.twig' %}
+  </div>
+
+{# <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script> #}
+{% do view.registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js') %}
+{% do view.registerJsFile(siteUrl ~ 'public/js/main.min.js') %}
+{% block scripts %}{% endblock %}
+</body>
+</html>

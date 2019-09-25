@@ -1,0 +1,40 @@
+{% extends "_layouts/_main" %}
+
+{% block bodyClass %}{{ entry.section.handle }}{% endblock %}
+{% block namespace %}{{ entry.section.handle }}{% endblock %}
+
+{% block main %}
+
+  <main>
+
+    <div class="row container">
+      <div class="col s12">.row with margin bot</div>
+      <div class="col s12 m7 l2">s12 m7 l2</div>
+      <div class="col s6 m5 l4">s6 m5 l4</div>
+      <div class="col s6 m6 l3">s6 m6 l3</div>
+      <div class="col s12 m6 l3">s12 m6 l3</div>
+    </div>
+
+    <div class="grid">
+      <div class="col s12">.grid without margin bot</div>
+      <div class="col s12 m7 l2">s12 m7 l2</div>
+      <div class="col s6 m5 l4">s6 m5 l4</div>
+      <div class="col s6 m6 l3">s6 m6 l3</div>
+      <div class="col s12 m6 l3">s12 m6 l3</div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">next grid</div>
+    </div>
+
+    <div class="row row--no-column-gap row--no-row-gap">
+      <div class="col s12">.row with .row--no-column-gap & .row--no-row-gap</div>
+      <div class="col s12 m7 l2">s12 m7 l2</div>
+      <div class="col s6 m5 l4">s6 m5 l4</div>
+      <div class="col s6 m6 l3">s6 m6 l3</div>
+      <div class="col s12 m6 l3">s12 m6 l3</div>
+    </div>
+
+  </main>
+
+{% endblock %}
