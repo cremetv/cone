@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+  &::selection {
+    background: transparentize($main, .2);
+    color: $white;
+  }
+}
+
+html {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $heading;
+}
+
+p, strong, ul li, blockquote, address {
+  color: $typo;
+}
+
+p {
+  line-height: 1.6;
+}
+
+strong {
+  font-weight: $fw-bold;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+
+  > span {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.6;
+
+    > span {
+
+      > span {
+        margin-left: .5em;
+      }
+    }
+  }
+}

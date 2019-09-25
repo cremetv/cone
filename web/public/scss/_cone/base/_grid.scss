@@ -1,0 +1,96 @@
+.container {
+  max-width: $max-width;
+}
+
+.grid, .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: $column-gap;
+  grid-row-gap: $row-gap;
+
+  &--no-column-gap {
+    grid-column-gap: 0;
+  }
+
+  &--no-row-gap {
+    grid-row-gap: 0;
+  }
+}
+
+.row {
+  margin: 0 auto $row-gap;
+}
+
+.col {
+  grid-column-end: span 12;
+
+  @include breakpoint('s') {
+    grid-column-end: span 6;
+  }
+
+  @include breakpoint('m') {
+    grid-column-end: span 4;
+  }
+
+
+  /* column sizes */
+  @for $i from 1 through 12 {
+    &.s#{$i} {
+      grid-column-end: span #{$i};
+    }
+  }
+
+  @include breakpoint('m') {
+    @for $i from 1 through 12 {
+      &.m#{$i} {
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+  @include breakpoint('l') {
+    @for $i from 1 through 12 {
+      &.l#{$i} {
+        grid-column-end: span #{$i};
+      }
+    }
+  }
+
+
+  /* start offset */
+  &.start {
+    @for $i from 1 through 12 {
+      &--s-#{$i} {
+        grid-column-start: $i;
+      }
+    }
+
+    @include breakpoint('m') {
+      @for $i from 1 through 12 {
+        &--m-#{$i} {
+          grid-column-start: $i;
+        }
+      }
+    }
+
+    @include breakpoint('l') {
+      @for $i from 1 through 12 {
+        &--l-#{$i} {
+          grid-column-start: $i;
+        }
+      }
+    }
+  }
+}
+
+
+.col {
+  background: transparentize(#3498db, .8);
+  // border: 2px solid transparentize(darken(#3498db, 5%), .8);
+  padding: 1rem;
+
+  &:nth-child(2n) {
+    background: transparentize(#3498db, .7);
+  }
+}
