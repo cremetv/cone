@@ -1,0 +1,15 @@
+blockquote {
+  line-height: 1.6;
+  color: $typo;
+  margin: $row-gap 2rem $row-gap 0;
+  padding-left: 2rem;
+  border-left: 2px solid lighten($typo, 50%);
+
+  cite {
+    font-style: italic;
+    display: block;
+    margin-top: 1rem;
+    color: lighten($typo, 20%);
+    letter-spacing: .05em;
+  }
+}

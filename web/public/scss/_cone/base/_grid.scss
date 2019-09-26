@@ -1,5 +1,25 @@
 .container {
   max-width: $max-width;
+  padding: 0 .5rem;
+
+  @include breakpoint('s') {
+    padding: 0 1rem;
+  }
+
+  @include breakpoint('m') {
+    padding: 0 1.5rem;
+  }
+
+  @include breakpoint('l') {
+    padding: 0 2rem;
+  }
+
+  &.borderless {
+    padding: 0;
+    @include breakpoint('s') {padding:0;}
+    @include breakpoint('m') {padding:0;}
+    @include breakpoint('l') {padding:0;}
+  }
 }
 
 .grid, .row {
@@ -85,12 +105,14 @@
 }
 
 
-.col {
-  background: transparentize(#3498db, .8);
-  // border: 2px solid transparentize(darken(#3498db, 5%), .8);
-  padding: 1rem;
+.row--marked {
+  .col {
+    background: transparentize(#3498db, .8);
+    // border: 2px solid transparentize(darken(#3498db, 5%), .8);
+    padding: 1rem;
 
-  &:nth-child(2n) {
-    background: transparentize(#3498db, .7);
+    &:nth-child(2n) {
+      background: transparentize(#3498db, .7);
+    }
   }
 }

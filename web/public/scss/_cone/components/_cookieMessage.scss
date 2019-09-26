@@ -1,0 +1,8 @@
+.cc-window {
+  opacity: .8;
+  transition: opacity .25s $cubic;
+
+  &:hover {
+    opacity: 1;
+  }
+}

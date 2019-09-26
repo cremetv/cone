@@ -7,7 +7,7 @@
 
   <main>
 
-    <div class="row container">
+    <div class="row container row--marked">
       <div class="col s12">.row with margin bot</div>
       <div class="col s12 m7 l2">s12 m7 l2</div>
       <div class="col s6 m5 l4">s6 m5 l4</div>
@@ -15,7 +15,7 @@
       <div class="col s12 m6 l3">s12 m6 l3</div>
     </div>
 
-    <div class="grid">
+    <div class="grid row--marked">
       <div class="col s12">.grid without margin bot</div>
       <div class="col s12 m7 l2">s12 m7 l2</div>
       <div class="col s6 m5 l4">s6 m5 l4</div>
@@ -23,16 +23,214 @@
       <div class="col s12 m6 l3">s12 m6 l3</div>
     </div>
 
-    <div class="row">
+    <div class="row row--marked">
       <div class="col s12">next grid</div>
     </div>
 
-    <div class="row row--no-column-gap row--no-row-gap">
+    <div class="row row--no-column-gap row--no-row-gap row--marked">
       <div class="col s12">.row with .row--no-column-gap & .row--no-row-gap</div>
       <div class="col s12 m7 l2">s12 m7 l2</div>
       <div class="col s6 m5 l4">s6 m5 l4</div>
       <div class="col s6 m6 l3">s6 m6 l3</div>
       <div class="col s12 m6 l3">s12 m6 l3</div>
+    </div>
+
+
+
+    <div class="row container">
+      <div class="col s12">
+        <h1>Heading h1</h1>
+        <h2>Heading h2</h2>
+        <h3>Heading h3</h3>
+        <h4>Heading h4</h4>
+        <h5>Heading h5</h5>
+        <h6>Heading h6</h6>
+      </div>
+
+      <div class="col s12">
+        <h1>Heading with a <span>span</span></h1>
+      </div>
+    </div>
+
+    <div class="row container">
+      <div class="col s12 m6">
+        <h1>Title 1</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <div class="col s12 m6">
+        <h2>Title 2</h2>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row container">
+      <div class="col s12">
+        <h2>Buttons</h2>
+        <a href="#!" class="btn">.btn</a>
+        <a href="#!" class="btn--inverse">.btn--inverse</a>
+        <a href="#!" class="btn--inverse round">.btn--inverse .round</a>
+        <a href="#!" class="btn disabled">.btn .disabled</a>
+        <a href="#!" class="btn--inverse round disabled">.btn--inverse .round .disabled</a>
+
+        <div class="btn-group">
+          <a href="#!" class="btn">btn group</a>
+          <a href="#!" class="btn--inverse">Button</a>
+          <a href="#!" class="btn--inverse">Button</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row container">
+      <div class="col s12">
+        <h1>cards</h1>
+      </div>
+
+      <div class="card">
+        <div class="card__image">
+          <div class="inner">
+            <img src="https://images.unsplash.com/photo-1564698010692-0fe284aae806?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80" alt="">
+          </div>
+        </div>
+        <div class="card__content">
+          <div class="card__title">Lorem ipsum dolor</div>
+          <p>only .card will behave like a .col</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image">
+          <div class="inner">
+            <img src="https://images.unsplash.com/photo-1564376130023-5360fbb7c91b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1324&q=80" alt="">
+          </div>
+        </div>
+        <div class="card__content">
+          <div class="card__title">a card</div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a href="#!" class="btn--inverse">button</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row container">
+
+
+      <div class="card col s12 m8 start--m-3 l6 start--l-4">
+        <div class="card__image">
+          <div class="inner">
+            <img src="https://images.unsplash.com/photo-1564935915760-e6de3c1f2b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
+          </div>
+        </div>
+        <div class="card__content">
+          <div class="card__title">centered card</div>
+          <p>
+            .card .col<br>
+            .s12<br>
+            .m8 .start--m-3<br>
+            .l6 .start--l-4
+          </p>
+          <a href="#!" class="btn--inverse">button</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row container">
+      <div class="card col s3">
+        <div class="card__image">
+          <div class="inner">
+            <img src="https://images.unsplash.com/photo-1540153448870-af780343526e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=156b02ddcd899f8e70270bf6c4f57932&auto=format&fit=crop&w=500&q=60" alt="">
+          </div>
+        </div>
+        <div class="card__content">
+          <div class="card__title">card .s3</div>
+        </div>
+      </div>
+
+      <div class="card col s5">
+        <div class="card__image">
+          <div class="inner">
+            <img src="https://images.unsplash.com/photo-1540198163009-7afda7da2945?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dfbcd0b31bec0e2668e1952ac24ea7d7&auto=format&fit=crop&w=500&q=60" alt="">
+          </div>
+        </div>
+        <div class="card__content">
+          <div class="card__title">This title is way too long for this small card</div>
+        </div>
+      </div>
+
+      <div class="card col s4">
+        <div class="card__image">
+          <div class="inner">
+            <img src="https://images.unsplash.com/photo-1564966039567-5f298fb2e8e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=562&q=80" alt="">
+          </div>
+        </div>
+        <div class="card__content">
+          <div class="card__title">card .s4</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row container">
+      <div class="col s12">
+        <h2>Blockquotes</h2>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    			For 50 years, WWF has been protecting the future of nature.
+    			The world's leading conservation organization,
+    			WWF works in 100 countries and is supported by
+    			1.2 million members in the United States and
+    			close to 5 million globally.
+    			<cite>Isaac Asimov</cite>
+    		</blockquote>
+      </div>
+    </div>
+
+
+    <div class="row container">
+      <div class="col s12">
+        <table>
+          <thead>
+            <tr>
+      				<th>Lorem</th>
+      				<th>ipsum</th>
+      				<th>dolor</th>
+      			</tr>
+          </thead>
+          <tbody>
+            <tr>
+      				<td>sit amet</td>
+      				<td>consectetur</td>
+      				<td>ashe</td>
+      			</tr>
+
+      			<tr>
+      				<td>adipisicing</td>
+      				<td>elit nemo</td>
+      				<td>corporis iure</td>
+      			</tr>
+
+      			<tr>
+      				<td>corrupti</td>
+      				<td>Voluptates blanditiis</td>
+      				<td>molestiae quo neque</td>
+      			</tr>
+
+      			<tr class="marked">
+      				<td>officiis minus</td>
+      				<td>nesciunt natus</td>
+      				<td>maiores ipsum eos</td>
+      			</tr>
+          </tbody>
+    		</table>
+      </div>
     </div>
 
   </main>

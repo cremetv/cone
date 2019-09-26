@@ -1,0 +1,107 @@
+table {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		margin: $row-gap 0;
+		overflow: hidden;
+
+		thead {
+			flex: 1;
+
+			tr {
+				flex: 1;
+				height: 100%;
+				border-bottom: none;
+				border-right: 1px solid lighten($typo, 50%);
+				box-shadow: 2px 0 4px 0 transparentize(lighten($typo, 20%), .8);
+
+				@include breakpoint('s') {
+					border-bottom: 1px solid transparentize($typo, .8);
+					border-right: none;
+				}
+			}
+		}
+
+		tbody {
+			display: flex;
+			flex-direction: row;
+			max-width: 100%;
+			overflow: auto;
+      @include scrollbar();
+
+			@include breakpoint('s') {
+				flex-direction: column;
+			}
+		}
+
+		tr {
+			display: flex;
+			flex-direction: column;
+			transition: background .25s $cubic;
+
+      @include breakpoint('m') {
+        border-bottom: 1px solid transparentize($typo, .8);
+      }
+
+			&:nth-child(2n) {
+				background: darken($white, 4%);
+
+				&:hover {
+					background: darken($white, 8%);
+				}
+			}
+
+			&:hover {
+				background: darken($white, 6%);
+			}
+
+			&.marked {
+				background: transparentize($main, .8);
+
+        td {
+          color: darken($typo, 4);
+        }
+
+        &:hover {
+          background: transparentize($main, .7);
+        }
+			}
+
+			@include breakpoint('s') {
+				flex-direction: row;
+			}
+		}
+
+		th, td {
+			flex: 1;
+			padding: .5rem 1rem;
+		}
+
+		th {
+			text-align: left;
+			color: darken($typo, 10%);
+			font-weight: 700;
+      font-size: 1.25rem;
+		}
+
+		td {
+			color: $typo;
+			font-weight: 400;
+		}
+
+    thead {
+      tr {
+        th, td {
+
+        }
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+
+		@include breakpoint('s') {
+			flex-direction: column;
+		}
+	}

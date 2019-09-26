@@ -44,7 +44,7 @@ $amplifier-heading: 1.25;
 
 
 /* scrollbar */
-@mixin scrollbar($size: 6px, $thumbColor: darken($lightgrey, 10%), $trackColor: $lightgrey, $borderRadius: 3px) {
+@mixin scrollbar($size: 6px, $thumbColor: darken($white, 20%), $trackColor: darken($white, 5%), $borderRadius: 3px) {
 
   &::-webkit-scrollbar {
     width: $size;
